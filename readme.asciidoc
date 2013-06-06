@@ -57,3 +57,5 @@ To speed up tests development, following tricks are advised:
 
 * It might be interesting to use suite extension of Arquillian, that would deploy Unified Push Server only once per all tests.
   See https://gist.github.com/blabno/5387599
+  
+* Use material for hackengarten https://gist.github.com/corinnekrych/5712058
