@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.org.jboss.shrinkwrap>1.1.2</version.org.jboss.shrinkwrap>
         <version.org.jboss.arquillian>1.0.3.Final</version.org.jboss.arquillian>
-        <version.org.jboss.shrinkwrap.resolver>2.0.0-beta-4-SNAPSHOT</version.org.jboss.shrinkwrap.resolver>
+        <version.org.jboss.shrinkwrap.resolver>2.0.0-cr-1-SNAPSHOT</version.org.jboss.shrinkwrap.resolver>
 
         <!-- property versions set by profiles -->
         <version.org.jboss.bom />

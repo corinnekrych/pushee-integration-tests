@@ -21,24 +21,27 @@ class RegisterPushAppSpecification extends Specification {
 
     @ArquillianResource URL root;
 
-    def "Registering a push application"() {
+    void "Registering a push application"() {
 
-        given: "Application My App is about to be registered"
-        def json = new JsonBuilder()
-        def request = RestAssured.given()
-                .contentType("application/json")
-                .header("Accept", "application/json")
-                .body(json {
-                    name: "MyApp"
-                    description: "awesome app"
-                })
+        given: "Application My App is about to be registered......"
+                def json = new JsonBuilder()
+                def request = RestAssured.given()
+                                .contentType("application/json")
+                                .header("Accept", "application/json")
+                                .body(json {
+                                    name: "MyApp"
+                                    description: "awesome app"
+                                })
 
         when: "Application is registered"
-        def response = RestAssured.given().spec(request).post(root.toString() + "rest/applications")
+                def response = RestAssured.given().spec(request).post(root.toString() + "rest/applications")
 
         then: "Response code 200 is returned"
-        response.statusCode() == 200
+                response.statusCode() == 200
+
         and: "Push App Id is not null"
-        response.body().path("id") != null
+                response.body().path("id") != null
     }
+
+
 }
